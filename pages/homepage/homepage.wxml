@@ -1,0 +1,47 @@
+<scroll-view scroll-y='true' style="height:1100rpx;" bindscrolltolower='lower'>
+<view>
+ <view class='search'>
+
+	<input type='text' placeholder='搜你想搜' placeholder-class='placeholder' bindinput='handleInput'>
+</input>
+ </view>
+
+  <swiper indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item wx:for="{{images}}" wx:key="id"><image src='http://127.0.0.1:8000{{item.image_url}}'></image></swiper-item>
+    <!-- <swiper-item><image src='/images/52.jpg'></image></swiper-item>
+    <swiper-item><image src='/images/52.jpg'></image></swiper-item> -->
+  </swiper>
+  
+  <view class='thumbnail'>
+      <image src='/images/53.jpg'></image>
+  </view>
+    <van-card wx:for="{{article}}"  
+		wx:key="id"
+  wx:for-item="item" wx:for-index="index" 
+	data-idd="{{item.id}}"
+  tag="{{item.name}}"
+  price="{{item.price}}"
+  desc="{{item.detail}}"
+  title="{{item.name}}"
+  thumb="{{item.image}}"
+	bind:tap="articleDetail"
+/>
+<!-- <van-card
+  wx:for="{{article}}"  
+  wx:key="id"
+  wx:for-item="item" 
+  wx:for-index="index" 
+  num="2"
+  price="{{item.price}}"
+  desc="描述信息"
+  title="商品标题"
+  thumb="http://127.0.0.1:8000/media/book_img/default.png"
+/> -->
+
+
+
+<view class="bottom">
+没有啦，翻到底了。。。
+</view>
+</view>
+</scroll-view>

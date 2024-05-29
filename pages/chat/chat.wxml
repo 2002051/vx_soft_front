@@ -1,0 +1,9 @@
+<view style="padding: 50rpx;">
+  <van-cell-group wx:for="{{chatList}}" wx:key="id" wx:for-item="item" bind:tap="gochat" data-my="{{item.buyerid.id}}" data-your="{{item.sellerid.id}}">
+    <view style="display: flex; align-items: center;margin-bottom: 10rpx;">
+			<image src="http://127.0.0.1:8000{{item.chatpeople.avatar}}" style="width: 110rpx; height: 110rpx; align-self: center;"></image>
+      <van-cell title="{{item.chatpeople.username}}" label="{{item.chatpeople.nickname}}" border="true" />
+     
+    </view>
+  </van-cell-group>
+</view>

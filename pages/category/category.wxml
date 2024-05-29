@@ -1,0 +1,64 @@
+
+<view class="main">
+  <view class="header">
+     <view class="search">
+       <form class="form1" bindsubmit="formSubmit">
+       <view class="search-detial">
+         <view>
+           <input type="text" name="bookname" model:value="{{ bookname }}"  placeholder='搜索您想要的书' placeholder-style='font-size: 34rpx; text-align: center; color: #ccc;'></input>
+         </view>
+        </view>
+         <view class="sousuobutton">
+          <button class="sousuo-button" form-type='submit'  bindtap='search'>搜索</button>
+          </view>
+       </form>
+    </view>
+  </view>  
+  <view class="content">
+  <view class="left">
+    <view class="kaoyan" bindtap='clickView' data-id="{{item.id}}"  wx:for="{{ category }}" wx:key="index"> 
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+
+
+  <view class='right'>
+    <view wx:if="{{complete}}">
+      <view bindtap='bookdetail' data-index="{{ index }}"class="s-items" wx:for = "{{ bookList }}" wx:key="id" 	data-idd="{{item.id}}" >
+       <view > <image class="book-image" src="http://127.0.0.1:8000{{item.image}}"> </image> </view>
+        <view class="book-detail">
+          <view class="titel">{{ item.name }}</view>
+					<view style="font-size: smaller;">{{item.detail}}</view>
+          <view class="price">
+            <view>¥{{ item.price }}</view>
+          
+          </view>
+		
+         </view>
+        </view>
+      </view>
+    </view> 
+   <view wx:if="{{!complete}}">
+     <view class="spinner">
+  <view class="spinner-container container1">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container2">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container3">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+</view>
+</view>
+</view>
+</view>

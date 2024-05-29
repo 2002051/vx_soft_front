@@ -1,0 +1,106 @@
+<view style="width: 80%;margin: 150rpx auto;">
+	<van-cell-group>
+		<van-field   label="书名" model:value="{{ name }}" placeholder="请输入书名" />
+		<van-field  label="作者" model:value="{{ author}}" placeholder="请输入作者" />
+		<van-field
+    model:value="{{ detail }}"
+    label="详情"
+    type="textarea"
+    placeholder="请输入详情"
+    autosize
+
+  />
+		<view style="margin: 20rpx 0rpx 20rpx 25rpx;">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="picker">
+					使用情况 ：{{array[index]}}
+				</view>
+			</picker>
+		</view>
+		<view style="margin: 20rpx 0rpx 20rpx 25rpx;">
+
+			<picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}" >
+				<view class="picker">
+					选择类别：{{array1[index1]}}
+				</view>
+			</picker>
+		</view>
+	</van-cell-group>
+价格	<van-stepper value="{{ 1 }}" bind:change="onChange" />
+	<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+	<van-button round block color='#08dae7' bind:tap="sell">发布图书</van-button>
+</view>
+<view>
+	
+</view>
+<van-toast id="van-toast" />
+
+<!-- 
+<view class="main" wx:if="{{ !search }}">
+  <view class="header" bindtap='search'>
+    <view class="abc">
+      <image src=""></image>搜索你要卖的书
+    </view>
+  </view>
+  <view class="book-list" wx:for="{{ SeelBookList }}"   wx:key="id">
+    <image class="book-image1" src="{{ item.imgurl}}"> </image>
+    <view class="book-detail1">
+      <view class="titel">{{ item.book_titel }}</view>
+      <view class="author1">{{ item.author }}</view>
+      <view class="price">
+        <text style="font-size: 30rpx;color: #bbb;margin-right: 10rpx;">回收价</text>
+        <text style="color: red">¥{{ item.price }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="totalprice">
+      <view> 合计：</view>
+      <view style='color: red;'>{{ TotalPrice }}元</view>
+    </view>
+    <view class="confirm" bindtap='confirmseel'>下一步</view>
+  </view>
+</view> -->
+
+<!-- <view class="search-main" wx:if="{{ search }}">
+  <view class="search-top">
+    <view class="search-input">
+      <view>
+      <input class="input-detail" type="text" name="BookName" value="{{ BookName }}" bindblur='SearchBook' auto-focus placeholder='书名/作者'></input>
+      </view>
+    </view>
+    <view class="back" bindtap='back'>取消</view>
+  </view>
+  <view wx:if="{{complete}}">
+     <view class="spinner">
+  <view class="spinner-container container1">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container2">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+  <view class="spinner-container container3">
+    <view class="circle1"></view>
+    <view class="circle2"></view>
+    <view class="circle3"></view>
+    <view class="circle4"></view>
+  </view>
+</view>
+  </view>
+  <view class="search-list" wx:for="{{ SearchList }}" wx:for-index="index">
+    <view class="select" bindtap='addSeelBookList' data-index="{{ index }}"></view>
+    <view class="book-detail">
+      <image class="book-image" src="{{ item.imgurl}}"> </image>
+      <view class="book-content">
+        <view class="titel">{{ item.book_titel }}</view>
+        <view class="author">{{ item.author }}</view>
+      </view>
+    </view>
+  </view>
+</view> -->

@@ -1,0 +1,91 @@
+<view class="header1" >
+  <view bindtap='myOrder'>未支付</view>
+  <view bindtap='myConfirm'>已付款</view>
+  <view bindtap='mySeel'>我的售卖</view>
+</view>
+<view wx:if="{{state==0}}">
+ <view class="order_list" wx:if="{{ hasorderindex }}">
+  <view class="order_detail" wx:for="{{ orderindex }}" wx:key="id"  >
+	
+      <view class="order_complete">
+        <view>
+					<image class="order_image" src="http://127.0.0.1:8000{{item.book.image }}"></image>
+        </view>
+        <view class="order_content">
+          <view>{{ item.book.name}}</view>
+          <view> <view>{{item.status_dict[1]}}</view></view>
+        </view>
+        <view class="order_price">
+          <view style='color:orange'>¥{{ item.book.price}}</view>
+          <view>✖️{{ order.num }}</view>
+        </view>
+      </view>
+  
+  
+
+  </view>
+
+</view>
+<!-- <view class="empty" wx:else>
+  <image src='/image/emptyorder.png'></image>
+  <view>您还没有相关的订单</view>
+  <view>可以看看有什么需要的</view>
+</view> -->
+</view>
+
+<!-- 数据我刚刚删掉了！！！好的哈哈 -->
+  <view wx:if="{{ state == 2 }}">
+    <view class="order_list" wx:if="{{ hasSeelList }}">
+      <view class="order_detail" wx:for="{{ seelList }}" wx:key="id"  >
+            <view class="order_complete">
+              <view>
+                 <image class="order_image" src="http://127.0.0.1:8000{{item.image }}"></image>
+              </view>
+              <view class="order_content">
+                <view>{{ item.name }}</view>
+<view>{{item.price}}元<view>{{item.active_dict[1]}}</view>
+</view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+		
+			<view wx:if="{{state==1}}">
+ <view class="order_list" wx:if="{{ hasbuyed}}">
+  <view class="order_detail" wx:for="{{ buyed }}" wx:key="id"  >
+	
+      <view class="order_complete">
+        <view>
+					<image class="order_image" src="http://127.0.0.1:8000{{item.book.image }}"></image>
+        </view>
+        <view class="order_content">
+          <view>{{ item.book.name}}111</view>
+          <view> <view>{{item.status_dict[1]}}</view></view>
+        </view>
+        <view class="order_price">
+          <view style='color:orange'>¥{{ item.book.price}}</view>
+          <view>✖️{{ order.num }}</view>
+        </view>
+      </view>
+  </view>
+
+</view>
+<view class="empty" wx:else>
+  <image src='/image/emptyorder.png'></image>
+  <view>您还没有相关的订单</view>
+  <view>可以看看有什么需要的</view>
+</view>
+</view>
+<view class="empty" wx:else>
+  <image src='/image/emptyorder.png'></image>
+  <view>您还没有相关的订单</view>
+  <view>可以看看有什么需要的</view>
+</view>
+
+	
+ 
+
+
+

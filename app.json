@@ -1,0 +1,87 @@
+{
+
+	"pages": [
+		"pages/homepage/homepage",
+		"pages/login/login",
+		"pages/register/register",
+		"pages/forgotPassword/forgotPassword",
+		"pages/index/index",
+		"pages/bookdetail/bookdetail",
+		"pages/category/category",
+		"pages/address/address",
+		"pages/cart/cart",
+		"pages/seel/seel",
+		"pages/orderdetail/orderdetail",
+		"pages/myorder/myorder",
+		"pages/seellist/seellist",
+		"pages/question/question",
+		"pages/articleDetail/articleDetail",
+		"pages/chat/chat",
+		"pages/chatview/chatview",
+		"pages/tiezi/tiezi",
+		"pages/pinlun/pinlun"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#08dae7",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black",
+		"onReachBottomDistance": 100
+	},
+	"tabBar": {
+		"color": "white",
+		"selectedColor": "#08dae7",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/homepage/homepage",
+				"iconPath": "image/shouye2.png",
+				"selectedIconPath": "image/shouye3 拷贝.png",
+				"text": "主页"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"iconPath": "image/fenlei.png",
+				"selectedIconPath": "image/fenlei 拷贝.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/cart/cart",
+				"iconPath": "image/gouwuche.png",
+				"selectedIconPath": "image/gouwuche 拷贝.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "image/gerenzhongxin.png",
+				"selectedIconPath": "image/gerenzhongxin 拷贝.png",
+				"text": "我的"
+			}
+		]
+	},
+	"usingComponents": {
+		"van-field": "@vant/weapp/field/index",
+		"van-button": "@vant/weapp/button/index",
+		"van-icon": "@vant/weapp/icon/index",
+		"van-uploader": "@vant/weapp/uploader/index",
+		"van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+		"van-dropdown-item": "@vant/weapp/dropdown-item/index",
+		"van-toast": "@vant/weapp/toast/index",
+		"van-stepper": "@vant/weapp/stepper/index",
+		"van-card": "@vant/weapp/card/index",
+		"van-goods-action": "@vant/weapp/goods-action/index",
+		"van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+		"van-goods-action-button": "@vant/weapp/goods-action-button/index",
+		"van-popup": "@vant/weapp/popup/index",
+		"van-cell": "@vant/weapp/cell/index",
+		"van-cell-group": "@vant/weapp/cell-group/index",
+		"van-switch": "@vant/weapp/switch/index",
+		"van-sticky": "@vant/weapp/sticky/index",
+		"van-sidebar": "@vant/weapp/sidebar/index",
+		"van-sidebar-item": "@vant/weapp/sidebar-item/index",
+		"van-dialog": "@vant/weapp/dialog/index"
+
+
+
+	}
+}
